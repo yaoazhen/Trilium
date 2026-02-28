@@ -104,7 +104,20 @@ const ALLOWED_OPTIONS = new Set<OptionNames>([
     "experimentalFeatures",
     "newLayout",
     "mfaEnabled",
-    "mfaMethod"
+    "mfaMethod",
+    "aiEnabled",
+    "aiSelectedProvider",
+    "aiSystemPrompt",
+    "aiTemperature",
+    "openaiApiKey",
+    "openaiDefaultModel",
+    "openaiBaseUrl",
+    "openaiAuthMethod",
+    "anthropicApiKey",
+    "anthropicDefaultModel",
+    "anthropicBaseUrl",
+    "ollamaBaseUrl",
+    "ollamaDefaultModel"
 ]);
 
 function getOptions() {

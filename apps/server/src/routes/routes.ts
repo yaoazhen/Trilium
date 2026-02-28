@@ -40,6 +40,7 @@ import loginApiRoute from "./api/login.js";
 import metricsRoute from "./api/metrics.js";
 import noteMapRoute from "./api/note_map.js";
 import notesApiRoute from "./api/notes.js";
+import openaiRoute from "./api/openai.js";
 
 import optionsApiRoute from "./api/options.js";
 import otherRoute from "./api/other.js";
@@ -217,6 +218,15 @@ function register(app: express.Application) {
     apiRoute(PUT, "/api/options", optionsApiRoute.updateOptions);
     apiRoute(GET, "/api/options/user-themes", optionsApiRoute.getUserThemes);
     apiRoute(GET, "/api/options/locales", optionsApiRoute.getSupportedLocales);
+
+    asyncApiRoute(GET, "/api/llm/providers/openai/models", openaiRoute.listModels);
+    asyncApiRoute(GET, "/api/llm/providers/anthropic/models", openaiRoute.listAnthropicModels);
+    asyncApiRoute(GET, "/api/llm/providers/ollama/models", openaiRoute.listOllamaModels);
+    asyncApiRoute(GET, "/api/llm/providers/openai/oauth/status", openaiRoute.getOauthStatus);
+    asyncApiRoute(PST, "/api/llm/providers/openai/oauth/authorize", openaiRoute.authorizeOauth);
+    asyncApiRoute(PST, "/api/llm/providers/openai/oauth/authorize-device", openaiRoute.authorizeOauthDevice);
+    asyncApiRoute(PST, "/api/llm/providers/openai/oauth/disconnect", openaiRoute.disconnectOauth);
+    asyncRoute(GET, "/api/llm/providers/openai/oauth/callback", [], openaiRoute.oauthCallback, apiResultHandler);
 
     apiRoute(PST, "/api/password/change", passwordApiRoute.changePassword);
     apiRoute(PST, "/api/password/reset", passwordApiRoute.resetPassword);

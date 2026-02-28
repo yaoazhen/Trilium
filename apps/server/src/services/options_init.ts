@@ -202,6 +202,26 @@ const defaultOptions: DefaultOption[] = [
     { name: "redirectBareDomain", value: "false", isSynced: true },
     { name: "showLoginInShareTheme", value: "false", isSynced: true },
 
+    // AI options
+    { name: "aiEnabled", value: "false", isSynced: true },
+    { name: "aiSelectedProvider", value: "openai", isSynced: true },
+    { name: "aiSystemPrompt", value: "", isSynced: true },
+    { name: "aiTemperature", value: "0.7", isSynced: true },
+    { name: "openaiApiKey", value: "", isSynced: false },
+    { name: "openaiDefaultModel", value: "", isSynced: true },
+    { name: "openaiBaseUrl", value: "https://api.openai.com/v1", isSynced: true },
+    { name: "openaiAuthMethod", value: "api", isSynced: true },
+    { name: "openaiOauthAccessToken", value: "", isSynced: false },
+    { name: "openaiOauthRefreshToken", value: "", isSynced: false },
+    { name: "openaiOauthExpiresAt", value: "0", isSynced: false },
+    { name: "openaiOauthAccountId", value: "", isSynced: false },
+    { name: "openaiOauthEmail", value: "", isSynced: false },
+    { name: "anthropicApiKey", value: "", isSynced: false },
+    { name: "anthropicDefaultModel", value: "", isSynced: true },
+    { name: "anthropicBaseUrl", value: "https://api.anthropic.com/v1", isSynced: true },
+    { name: "ollamaBaseUrl", value: "http://localhost:11434", isSynced: true },
+    { name: "ollamaDefaultModel", value: "", isSynced: true },
+
     {
         name: "seenCallToActions",
         value: JSON.stringify([

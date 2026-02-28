@@ -138,6 +138,26 @@ export interface OptionDefinitions extends KeyboardShortcutsOptions<KeyboardActi
     redirectBareDomain: boolean;
     showLoginInShareTheme: boolean;
 
+    // AI/LLM options
+    aiEnabled: boolean;
+    aiSelectedProvider: string;
+    aiSystemPrompt: string;
+    aiTemperature: string;
+    openaiApiKey: string;
+    openaiDefaultModel: string;
+    openaiBaseUrl: string;
+    openaiAuthMethod: string;
+    openaiOauthAccessToken: string;
+    openaiOauthRefreshToken: string;
+    openaiOauthExpiresAt: string;
+    openaiOauthAccountId: string;
+    openaiOauthEmail: string;
+    anthropicApiKey: string;
+    anthropicDefaultModel: string;
+    anthropicBaseUrl: string;
+    ollamaBaseUrl: string;
+    ollamaDefaultModel: string;
+
     seenCallToActions: string;
     experimentalFeatures: string;
 }

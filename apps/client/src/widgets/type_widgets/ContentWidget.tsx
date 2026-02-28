@@ -4,6 +4,7 @@ import AppearanceSettings from "./options/appearance";
 import ShortcutSettings from "./options/shortcuts";
 import TextNoteSettings from "./options/text_notes";
 import CodeNoteSettings from "./options/code_notes";
+import AiSettings from "./options/ai_settings";
 import ImageSettings from "./options/images";
 import SpellcheckSettings from "./options/spellcheck";
 import PasswordSettings from "./options/password";
@@ -18,13 +19,14 @@ import "./ContentWidget.css";
 import { t } from "../../services/i18n";
 import BackendLog from "./code/BackendLog";
 
-export type OptionPages = "_optionsAppearance" | "_optionsShortcuts" | "_optionsTextNotes" | "_optionsCodeNotes" | "_optionsImages" | "_optionsSpellcheck" | "_optionsPassword" | "_optionsMFA" | "_optionsEtapi" | "_optionsBackup" | "_optionsSync" | "_optionsOther" | "_optionsLocalization" | "_optionsAdvanced";
+export type OptionPages = "_optionsAppearance" | "_optionsShortcuts" | "_optionsTextNotes" | "_optionsCodeNotes" | "_optionsAi" | "_optionsImages" | "_optionsSpellcheck" | "_optionsPassword" | "_optionsMFA" | "_optionsEtapi" | "_optionsBackup" | "_optionsSync" | "_optionsOther" | "_optionsLocalization" | "_optionsAdvanced";
 
 const CONTENT_WIDGETS: Record<OptionPages | "_backendLog", (props: TypeWidgetProps) => JSX.Element> = {
     _optionsAppearance: AppearanceSettings,
     _optionsShortcuts: ShortcutSettings,
     _optionsTextNotes: TextNoteSettings,
     _optionsCodeNotes: CodeNoteSettings,
+    _optionsAi: AiSettings,
     _optionsImages: ImageSettings,
     _optionsSpellcheck: SpellcheckSettings,
     _optionsPassword: PasswordSettings,
